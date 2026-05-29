@@ -180,6 +180,24 @@ h1 {
   background: var(--accent);
 }
 
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-note {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 .contact-list {
   display: grid;
   gap: 12px;
@@ -283,6 +301,100 @@ h1 {
   color: var(--muted);
 }
 
+.publications-panel {
+  margin-top: 24px;
+}
+
+.publication-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+.publication-meta {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.publication-year {
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.publication-type {
+  width: fit-content;
+  padding: 3px 9px;
+  border: 1px solid #c7d7ed;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.publication-content h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.publication-content h3 a:hover {
+  color: var(--accent);
+}
+
+.publication-authors,
+.publication-venue {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.publication-authors strong {
+  color: var(--text);
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.publication-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.publication-links a:hover {
+  border-color: #9db8dc;
+  background: #f1f6fd;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -317,12 +429,25 @@ h1 {
     gap: 6px;
   }
 
+  .publication-item {
+    grid-template-columns: 1fr;
+  }
+
   .site-footer {
     display: grid;
   }
 }
 
 @media (max-width: 480px) {
+  .section-heading {
+    display: grid;
+    gap: 4px;
+  }
+
+  .section-note {
+    white-space: normal;
+  }
+
   .panel {
     padding: 18px;
   }
